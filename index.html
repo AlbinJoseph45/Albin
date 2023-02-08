@@ -294,7 +294,7 @@
         <div class="container">
             <h1 class="text-center pb-5">Contact Me</h1>
 
-                <form action="" id="submit-form" class="row g-3 needs-validation" novalidate>
+                <form action="email.php" method="post" class="row g-3 needs-validation" novalidate>
                     <div class="col-md-6">
                       <label for="validationCustom01" class="form-label">First name</label>
                       <input name="fname" type="text" class="form-control" id="validationCustom01" required placeholder="First name">
@@ -462,7 +462,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/ba0220f53c.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <script>
         function myFunction(x) {
@@ -483,25 +482,6 @@
         myFunction(x) // Call listener function at run time
         x.addListener(myFunction) // Attach listener function on state changes
     </script>
-                                                        
-    <script>
-    $("#submit-form").submit((e)=>{
-      e.preventDefault()
-      $.ajax({
-          url:"https://script.google.com/macros/s/AKfycbxjGQk8uVMMBS1PQMgB4IoE2dPUCN9R0LcJK09e_cQWlagM7qF-RFI5TarxFTm_dAIe/exec",
-          data:$("#submit-form").serialize(),
-          method:"post",
-          success:function (response){
-              alert("Form submitted successfully")
-              window.location.reload()
-          },
-          error:function (err){
-              alert("Something Error")
-
-          }
-      })
-  })
-</script>
-
+                                                
 </body>
 </html>
