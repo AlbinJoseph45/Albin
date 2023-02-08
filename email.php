@@ -1,5 +1,4 @@
 <?php
-  Allow: GET, HEAD, PUT, POST
   if (isset($_POST['submit'])) {
     $to = "albin4599@gmail.com";
     $subject = $_POST['fname'] ."send a message on your website";
