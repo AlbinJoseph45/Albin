@@ -294,10 +294,10 @@
         <div class="container">
             <h1 class="text-center pb-5">Contact Me</h1>
 
-                <form class="row g-3 needs-validation" novalidate>
+                <form action="email.php" method="post" class="row g-3 needs-validation" novalidate>
                     <div class="col-md-6">
                       <label for="validationCustom01" class="form-label">First name</label>
-                      <input type="text" class="form-control" id="validationCustom01" required placeholder="First name">
+                      <input name="fname" type="text" class="form-control" id="validationCustom01" required placeholder="First name">
                       <div class="invalid-feedback">
                         Please provide a valid First name.
                       </div>
@@ -305,7 +305,7 @@
 
                     <div class="col-md-6">
                       <label for="validationCustom02" class="form-label">Last name</label>
-                      <input type="text" class="form-control" id="validationCustom02"  required placeholder="Last name">
+                      <input name="lname" type="text" class="form-control" id="validationCustom02"  required placeholder="Last name">
                       <div class="invalid-feedback">
                         Please provide a valid Last name.
                       </div>
@@ -313,14 +313,14 @@
                     
                     <div class="col-md-6">
                       <label for="validationCustom03" class="form-label">City</label>
-                      <input type="text" class="form-control" id="validationCustom03" required placeholder="City">
+                      <input name="city" type="text" class="form-control" id="validationCustom03" required placeholder="City">
                       <div class="invalid-feedback">
                         Please provide a valid city.
                       </div>
                     </div>
                     <div class="col-md-6">
                       <label for="validationCustom04" class="form-label">State</label>
-                      <select class="form-select" id="validationCustom04" required>
+                      <select name="state" class="form-select" id="validationCustom04" required>
                         <option selected disabled value="">Select</option>
                         
                         <option>	Andhra Pradesh	</option>
@@ -360,7 +360,7 @@
                     
                     <div class="col-md-6">
                         <label for="exampleFormControlInput1" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" required placeholder="Email address">
+                        <input name="email" type="email" class="form-control" id="exampleFormControlInput1" required placeholder="Email address">
                         <div class="invalid-feedback">
                             Please provide a valid email address.
                         </div>
@@ -368,7 +368,7 @@
 
                     <div class="col-md-6">
                         <label for="exampleFormControlInput2" class="form-label">Phone</label>
-                        <input type="tel" class="form-control" id="exampleFormControlInput2" required placeholder="Phone number">
+                        <input name="phone" type="tel" class="form-control" id="exampleFormControlInput2" required placeholder="Phone number">
                         <div class="invalid-feedback">
                             Please provide a valid phone number.
                         </div>
@@ -376,7 +376,7 @@
 
                     <div class="col-md-12">
                         <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required  placeholder="Type your message..."></textarea>
+                        <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3" required  placeholder="Type your message..."></textarea>
                         <div class="invalid-feedback">
                             Please type your message.
                         </div>
