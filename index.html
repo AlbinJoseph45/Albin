@@ -294,7 +294,7 @@
         <div class="container">
             <h1 class="text-center pb-5">Contact Me</h1>
 
-                <form action="https://script.google.com/macros/s/AKfycbw82ze1WMiGCsuh8P5wWei9hlwgtflx0laeLYeensvg4LrhILdUDC_FWVFvyQXW4jQ/exec" method="POST" class="row g-3 needs-validation" novalidate>
+                <form id="submit-form" action="" class="row g-3 needs-validation" novalidate>
                     <div class="col-md-6">
                       <label for="validationCustom01" class="form-label">First name</label>
                       <input name="fname" type="text" class="form-control" id="validationCustom01" required placeholder="First name">
@@ -485,23 +485,28 @@
     </script>
     
      <script>
-    $("#submit-form").submit((e)=>{
-        e.preventDefault()
-        $.ajax({
-            url:"https://script.google.com/macros/s/AKfycbxToB1FVUwSDDB3a80PxixhMNcL3f6vBu9B_I4-kKEDL5r-cWvOth3cmUBTvPOUUgXP/exec",
-            data:$("#submit-form").serialize(),
-            method:"post",
-            success:function (response){
-                alert("Form submitted successfully")
-                window.location.reload()
-            },
-            error:function (err){
-                alert("Something Error")
-  
-            }
+        $("#submit-form").submit((e)=>{
+          e.preventDefault()
+          // Check form validity
+          if (e.target.checkValidity()) {
+            $.ajax({
+              url:"https://script.google.com/macros/s/AKfycbw82ze1WMiGCsuh8P5wWei9hlwgtflx0laeLYeensvg4LrhILdUDC_FWVFvyQXW4jQ/exec",
+              data:$("#submit-form").serialize(),
+              method:"post",
+              success:function (response){
+                  alert("Success!\nThanks for the response")
+                  window.location.reload()
+              },
+              error:function (err){
+                  alert("Something went wrong!\nPlease try again later")
+              }
+            })
+          } else {
+            // Show the validation error messages
+            e.target.reportValidity();
+          }
         })
-    })
-  </script>
+      </script>
                                                 
 </body>
 </html>
