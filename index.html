@@ -50,8 +50,9 @@
         .interest-card:hover{background: #198754; color: white;}
         .interest-card:hover > .interest-icon{color: #e2f5ec;}
         .interest-icon{color: #198754;}
-        .about-links{text-decoration: none; color: black;}
-        .about-links:hover {color: #198754;}
+        .about-links{text-decoration: none; color: #198754;}
+        .about-links:hover {text-decoration: underline;}
+        .about-text:hover{font-weight: bold; cursor: default;}
         .experience-card{transition: transform .4s;}
         .experience-card:hover{transform: scale(1.04);}
         .image-albin{transition: transform .5s;}
@@ -137,28 +138,30 @@
             <h1 class="text-center pb-5">About Me</h1>
             <div class="about pb-5 pe-5">
                 <table class="table">
-                <tbody>
+                   <tbody>
                     <tr>
-                        <th scope="row">Name</th>
-                        <td>Albin Joseph</td>
+                        <th scope="row">Name:</th>
+                        <td class="text-success"><span class="about-text">Albin Joseph</span></td>
                     </tr>
                     <tr>
-                        <th scope="row">Location</th>
-                        <td>Kannur, Kerala</td>
+                        <th scope="row">Location:</th>
+                        <td class="text-success"><span class="about-text">Kannur, Kerala</span></td>
                     </tr>
                     <tr>
-                        <th scope="row">Email</th>
+                        <th scope="row">Skills:</th>
+                        <td class="text-success">
+                            <span class="about-text">HTML, CSS, JS,<br>Bootstrap, Git,<br>Python, Java, C</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Email:</th>
                         <td><a class="about-links" href="mailto:albin4599@gmail.com">albin4599@gmail.com</a></td>
                     </tr>
                     <tr>
-                        <th scope="row">LinkedIn</th>
-                        <td><a class="about-links" href="https://linkedin.com/in/albinjoseph4" target="_blank">albinjoseph4</a></td>
-                        </tr>
-                    <tr>
-                        <th scope="row">GitHub</th>
+                        <th scope="row">GitHub:</th>
                         <td><a class="about-links" href="https://github.com/ALBINJOSEPH45" target="_blank">albinjoseph45</a></td>
                     </tr>
-                </tbody>
+                   </tbody>
                 </table>
             </div>
         </div>
